@@ -5,3 +5,7 @@ export const getToken = () => {
 export const isLoggedIn = () => {
   return !!getToken();
 };
+
+export const logout = () => {
+  localStorage.removeItem('token');
+};
