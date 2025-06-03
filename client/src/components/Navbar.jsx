@@ -6,31 +6,35 @@ import { isLoggedIn, logout } from '../api/auth';
 export default function Navbar() {
   const navigate = useNavigate();
   const handleLogout = () => {
-    logout();            // remove token
-    navigate('/login');  // redirect to login page
+    logout();
+    navigate('/login');
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
         <Link className="navbar-brand" to="/">
           AI Job Tracker
         </Link>
-
-        <div>
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav ms-auto">
             {isLoggedIn() ? (
-              // If logged in, show Logout
-              <li className="nav-item">
-                <button
-                  className="btn btn-outline-light"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </button>
-              </li>
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/profile">
+                    Profile
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <button
+                    className="btn btn-outline-light ms-2"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </li>
+              </>
             ) : (
-              // If not logged in, show Login / Register
               <>
                 <li className="nav-item">
                   <Link className="nav-link" to="/login">
@@ -50,5 +54,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
