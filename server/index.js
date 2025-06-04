@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/jobs', require('./routes/jobs'));
+app.use('/api/ai', require('./routes/ai'));
 // Test route
 app.get('/', (req, res) => {
   res.send('API is running');
