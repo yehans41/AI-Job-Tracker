@@ -19,10 +19,7 @@ A full-stack MERN-style web application designed to streamline the job search pr
 -   **AI Integration:** Cohere API, Prompt Engineering
 -   **Tools & Concepts:** RESTful API Design, MVC (Model-View-Controller) Architecture, Postman, Secure Key Management (`.env`)
 
-## Screenshots & Demo
-
-*(This is where you should add your screenshots! Drag and drop the image files directly into the GitHub text editor to upload them.)*
+## Screenshots
 
 | Login Page | Main Dashboard | AI Cover Letter |
-| :--------: | :------------: | :-------------: |
-| _(Your Screenshot Here)_ | _(Your Screenshot Here)_ | _(Your Screenshot Here)_ |
+|  |  |  |
