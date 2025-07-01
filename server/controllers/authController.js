@@ -1,8 +1,8 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { User } = require('../models'); // Sequelize User model
+const { User } = require('../models'); 
 
-// Registration remains unchanged
+// Registration
 const register = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -17,7 +17,7 @@ const register = async (req, res) => {
   }
 };
 
-// Login remains unchanged
+// Login
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -34,7 +34,6 @@ const login = async (req, res) => {
   }
 };
 
-// ← Make sure this function is defined exactly like this
 const profile = async (req, res) => {
   try {
     const user = await User.findByPk(req.user.id, {
@@ -50,5 +49,5 @@ const profile = async (req, res) => {
 module.exports = {
   register,
   login,
-  profile, // ← Don’t forget to export this
+  profile, 
 };

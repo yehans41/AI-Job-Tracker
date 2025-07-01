@@ -16,7 +16,7 @@ export default function Dashboard() {
   });
   const navigate = useNavigate();
 
-  // NEW: states for Cover Letter feature
+  // States for Cover Letter
   const [coverLetter, setCoverLetter] = useState('');
   const [loadingCover, setLoadingCover] = useState(false);
   const [selectedJobId, setSelectedJobId] = useState(null);
@@ -56,7 +56,7 @@ export default function Dashboard() {
     }
   };
 
-  // When “Edit” is clicked…
+  // When “Edit” is clicked
   const handleEditClick = (job) => {
     setEditingJob(job);
     setFormData({
@@ -97,7 +97,7 @@ export default function Dashboard() {
     setError('');
   };
 
-  // NEW: Generate Cover Letter handler (calls HF backend)
+  // Generate Cover Letter handler (calls HF backend)
   const handleGenerateCoverLetter = async (jobId) => {
     const token = getToken();
     setLoadingCover(true);
@@ -216,7 +216,7 @@ export default function Dashboard() {
 
       {error && <div className="alert alert-danger">{error}</div>}
 
-      {/* --- Edit Job Form (shown only when editingJob is truthy) --- */}
+      {/* --- Edit Job Form (shown only when editingJob is true) --- */}
       {editingJob && (
         <div className="card mb-4 shadow-sm">
           <div className="card-body">
@@ -335,7 +335,7 @@ export default function Dashboard() {
                   >
                     Delete
                   </button>
-                  {/* NEW: Cover Letter Button */}
+                  {/* Cover Letter Button */}
                   <button
                     className="btn btn-sm btn-outline-success"
                     onClick={() => handleGenerateCoverLetter(job.id)}
@@ -356,7 +356,7 @@ export default function Dashboard() {
         </table>
       )}
 
-      {/* NEW: Cover Letter Output Card */}
+      {/* Cover Letter Output Card */}
       {coverLetter && (
         <div className="card mt-4 shadow-sm">
           <div className="card-header">

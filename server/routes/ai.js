@@ -1,4 +1,3 @@
-// server/routes/ai.js
 const express = require('express');
 const router = express.Router();
 const { generateCoverLetter } = require('../controllers/aiController');

@@ -3,7 +3,7 @@ const router = express.Router();
 const { createJob, getJobs, updateJob, deleteJob } = require('../controllers/jobController');
 const authenticate = require('../middleware/auth');
 
-router.use(authenticate); // Protect all job routes
+router.use(authenticate); 
 
 router.post('/', createJob);
 router.get('/', getJobs);
