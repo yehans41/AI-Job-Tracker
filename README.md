@@ -21,5 +21,8 @@ A full-stack MERN-style web application designed to streamline the job search pr
 
 ## Screenshots
 
-| Login Page | Main Dashboard | AI Cover Letter |
-|  |  |  |
+| Login Page | Dashboard | Profile | AI Cover Letter |
+| <img width="1689" alt="Login" src="https://github.com/user-attachments/assets/73288031-388c-449a-bea0-2f8b8f676cb4" />
+| <img width="1706" alt="Dashboard" src="https://github.com/user-attachments/assets/c39152dc-8d57-4ea3-90c3-f510f4142b57" />
+| <img width="1704" alt="Profile" src="https://github.com/user-attachments/assets/e6f569ab-b1b0-49f3-b8e6-d6f13f897103" />
+| <img width="1297" alt="Cover Letter" src="https://github.com/user-attachments/assets/eeac9ca4-ddaa-4b5d-8ef6-0e1562ffb254" />|
